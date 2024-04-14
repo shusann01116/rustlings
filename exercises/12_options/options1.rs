@@ -7,11 +7,11 @@
 // If it's before 10PM, there's 5 scoops left. At 10PM, someone eats it
 // all, so there'll be no more left :(
 fn maybe_icecream(time_of_day: u16) -> Option<u16> {
-    if !(0 < time_of_day && time_of_day < 24) {
+    if !(0 <= time_of_day && time_of_day < 24) {
         return None;
     }
 
-    if 10 < time_of_day {
+    if 22 <= time_of_day {
         return Some(0);
     }
     Some(5)
